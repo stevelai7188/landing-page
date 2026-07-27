@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>山东半岛8天7夜深度游 | 青岛·蓬莱·烟台·威海·崂山</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#533afd;--purple-dk:#4434d4;--navy:#061b31;--slate:#64748d;
+  --label:#273951;--dark-bg:#1c1e54;--border:#e5edf5;
+  --shadow:rgba(50,50,93,0.25) 0 30px 45px -30px,rgba(0,0,0,0.1) 0 18px 36px -18px;
+  --shadow-sm:rgba(23,23,23,0.08) 0 15px 35px;
+  --font:'Noto Sans SC','Source Sans 3',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);font-weight:300;color:var(--navy);background:#fff;line-height:1.6}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:18px;font-weight:500;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{color:var(--purple)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:400;transition:background .2s}
+.nav-cta:hover{background:var(--purple-dk)}
+.nav-cta svg{width:18px;height:18px}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;margin-top:64px}
+.hero-bg{position:absolute;inset:0;background:url('shandong-images/qingdao_hero.jpg') center/cover no-repeat}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,30,84,0.92) 0%,rgba(83,58,253,0.75) 100%)}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:80px 0}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:6px;padding:6px 14px;font-size:13px;color:#fff;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:#15be53}
+.hero h1{font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.08;color:#fff;letter-spacing:-1px;margin-bottom:20px}
+.hero h1 strong{font-weight:500}
+.hero p{font-size:18px;color:rgba(255,255,255,0.85);margin-bottom:36px;max-width:560px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--purple);padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:500;font-size:16px;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.2)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4);padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:400;font-size:16px;transition:border-color .2s}
+.btn-ghost:hover{border-color:#fff}
+.hero-stats{position:absolute;bottom:40px;right:40px;display:flex;gap:16px;z-index:2}
+.stat-card{background:rgba(255,255,255,0.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.2);border-radius:10px;padding:16px 20px;color:#fff;min-width:120px}
+.stat-card .num{font-size:28px;font-weight:500}
+.stat-card .label{font-size:12px;color:rgba(255,255,255,0.7);margin-top:2px}
+
+/* SECTION COMMON */
+.section{padding:100px 0}
+.section-dark{background:var(--dark-bg);color:#fff}
+.section-dark .section-title{color:#fff}
+.section-dark .section-subtitle{color:rgba(255,255,255,0.7)}
+.section-label{font-size:13px;font-weight:500;color:var(--purple);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.section-title{font-size:clamp(28px,4vw,40px);font-weight:300;line-height:1.15;color:var(--navy);letter-spacing:-0.5px;margin-bottom:16px}
+.section-subtitle{font-size:17px;color:var(--slate);max-width:600px;margin-bottom:48px}
+
+/* HIGHLIGHTS */
+.highlights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.highlight-card{position:relative;border-radius:12px;overflow:hidden;height:220px;cursor:pointer}
+.highlight-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.highlight-card:hover img{transform:scale(1.05)}
+.highlight-card .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 60%);display:flex;align-items:flex-end;padding:20px}
+.highlight-card h3{color:#fff;font-size:18px;font-weight:500}
+
+/* ITINERARY */
+.itinerary{padding:100px 0}
+.itinerary-grid{display:grid;gap:32px;max-width:900px;margin:0 auto}
+.day-card{display:grid;grid-template-columns:100px 1fr;gap:24px;align-items:start}
+.day-label{position:sticky;top:100px;background:var(--purple);color:#fff;padding:10px 16px;border-radius:8px;text-align:center;font-size:14px;font-weight:500;white-space:nowrap}
+.day-content{background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+.day-content:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.day-content h3{font-size:20px;font-weight:500;margin-bottom:12px;color:var(--navy)}
+.day-content ul{list-style:none;margin-bottom:12px}
+.day-content li{font-size:15px;color:var(--label);padding:4px 0;display:flex;align-items:flex-start;gap:8px}
+.day-content li::before{content:'✦';color:var(--purple);font-size:12px;margin-top:3px;flex-shrink:0}
+.day-tag{display:inline-block;background:rgba(83,58,253,0.08);color:var(--purple);font-size:12px;font-weight:500;padding:4px 10px;border-radius:4px;margin-top:8px}
+
+/* INCLUDES */
+.includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.include-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;transition:box-shadow .2s}
+.include-card:hover{box-shadow:var(--shadow)}
+.include-icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--purple),#7c5cff);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.include-card h4{font-size:16px;font-weight:500;margin-bottom:6px}
+.include-card p{font-size:14px;color:var(--slate)}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.gallery-item{border-radius:10px;overflow:hidden;height:200px;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.05)}
+
+/* CTA SECTION */
+.cta-section{text-align:center}
+.cta-section h2{font-size:clamp(28px,4vw,44px);font-weight:300;color:#fff;letter-spacing:-0.5px;margin-bottom:16px}
+.cta-section p{color:rgba(255,255,255,0.8);font-size:17px;margin-bottom:36px;max-width:500px;margin-inline:auto}
+.cta-whatsapp{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-size:18px;font-weight:500;transition:transform .2s,box-shadow .2s}
+.cta-whatsapp:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(37,211,102,0.3)}
+.cta-whatsapp svg{width:24px;height:24px}
+.cta-sub{margin-top:16px;font-size:14px;color:rgba(255,255,255,0.6)}
+
+/* FOOTER */
+.footer{background:#0d253d;color:rgba(255,255,255,0.6);padding:48px 0;text-align:center;font-size:14px}
+.footer a{color:rgba(255,255,255,0.8);text-decoration:none}
+.footer a:hover{color:#fff}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-stats{position:relative;bottom:auto;right:auto;margin-top:32px;flex-wrap:wrap}
+  .day-card{grid-template-columns:1fr}
+  .day-label{position:static;margin-bottom:12px}
+  .hero-content{padding:60px 0 40px}
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.animate{animation:fadeUp .6s ease-out both}
+.delay-1{animation-delay:.1s}.delay-2{animation-delay:.2s}.delay-3{animation-delay:.3s}
+</style>
+</head>
+<body>
+<nav class="nav">
+<div class="container">
+<a href="#" class="logo">🏔️ <span>山东半岛</span>深度游</a>
+<a href="https://wa.me/60167012960?text=您好！我想咨询山东半岛8天7夜旅游行程" class="nav-cta" target="_blank">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.607-1.262A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.1 0-4.065-.67-5.666-1.817l-.407-.275-3.067.834.818-2.992-.29-.417A9.727 9.727 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+WhatsApp咨询
+</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="container hero-content">
+<div class="hero-badge animate">11月发团 · 限时名额</div>
+<h1 class="animate delay-1">探索<strong>山东半岛</strong><br>八天七夜深度之旅</h1>
+<p class="animate delay-2">青岛 · 蓬莱 · 烟台 · 威海 · 崂山<br>5城联动 · 专属导游 · 四钻酒店 · 全程无忧</p>
+<div class="hero-cta animate delay-3">
+<a href="https://wa.me/60167012960?text=您好！我想报名山东半岛8天7夜旅游行程" class="btn-primary" target="_blank">
+立即预订 WhatsApp
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</a>
+<a href="#itinerary" class="btn-ghost">查看行程</a>
+</div>
+</div>
+<div class="hero-stats animate delay-3">
+<div class="stat-card">
+<div class="num">8天</div>
+<div class="label">深度行程</div>
+</div>
+<div class="stat-card">
+<div class="num">5城</div>
+<div class="label">精华覆盖</div>
+</div>
+<div class="stat-card">
+<div class="num">7晚</div>
+<div class="label">四钻酒店</div>
+</div>
+</div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="section">
+<div class="container">
+<div class="section-label">行程亮点</div>
+<h2 class="section-title">一次旅行，五大城市精华</h2>
+<p class="section-subtitle">从仙境蓬莱到浪漫威海，从啤酒之城青岛到道教名山崂山，一次走遍山东半岛最美风景。</p>
+<div class="highlights-grid">
+<div class="highlight-card">
+<img src="shandong-images/qingdao_hero.jpg" alt="青岛栈桥">
+<div class="overlay"><h3>青岛海滨风情</h3></div>
+</div>
+<div class="highlight-card">
+<img src="shandong-images/penglai.jpg" alt="蓬莱仙境">
+<div class="overlay"><h3>仙境蓬莱阁</h3></div>
+</div>
+<div class="highlight-card">
+<img src="shandong-images/qingdao_hero.jpg" alt="威海刘公岛">
+<div class="overlay"><h3>威海刘公岛</h3></div>
+</div>
+<div class="highlight-card">
+<img src="shandong-images/laoshan.jpg" alt="崂山">
+<div class="overlay"><h3>崂山仰口索道</h3></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ITINERARY -->
+<section class="itinerary section-dark" id="itinerary">
+<div class="container">
+<div class="section-label">详细行程</div>
+<h2 class="section-title">8天7夜完整行程</h2>
+<p class="section-subtitle">精心规划每日行程，景点、美食、住宿一站搞定。</p>
+<div class="itinerary-grid">
+
+<div class="day-card">
+<div class="day-label">Day 1</div>
+<div class="day-content">
+<h3>抵达青岛 · 开启旅程</h3>
+<ul>
+<li>抵达青岛胶东国际机场</li>
+<li>专属导游接机</li>
+<li>送酒店办理入住，休息调整</li>
+</ul>
+<span class="day-tag">🏨 住宿：青岛四钻酒店</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 2</div>
+<div class="day-content">
+<h3>青岛 → 蓬莱 · 仙境之旅</h3>
+<ul>
+<li>早餐后乘车前往仙境蓬莱</li>
+<li>八仙雕像广场 — 感受神话传说</li>
+<li>蓬莱阁（5A景区）— 人间仙境，海市蜃楼起源地</li>
+</ul>
+<span class="day-tag">🏨 住宿：蓬莱四钻酒店 · 含酒店早餐</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 3</div>
+<div class="day-content">
+<h3>蓬莱 → 烟台 → 威海</h3>
+<ul>
+<li>张裕卡斯特酒庄 — 百年葡萄酒文化体验</li>
+<li>朝阳街 — 烟台最美文艺街区</li>
+<li>傍晚前往威海，入住酒店</li>
+</ul>
+<span class="day-tag">🏨 住宿：威海四钻酒店 · 含酒店早餐</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 4</div>
+<div class="day-content">
+<h3>威海 · 海滨浪漫</h3>
+<ul>
+<li>刘公岛（5A，含游船）— 甲午战争纪念地</li>
+<li>火炬八街 — 网红打卡地"小镰仓"</li>
+<li>威海海滨漫步，感受北方海滨慢生活</li>
+</ul>
+<span class="day-tag">🏨 住宿：威海四钻酒店 · 含酒店早餐</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 5</div>
+<div class="day-content">
+<h3>威海 → 崂山 · 山海奇观</h3>
+<ul>
+<li>早餐后乘车前往青岛崂山</li>
+<li>仰口风景区（含往返索道）— 崂山最美一线</li>
+<li>青山渔村 — 海边彩色小渔村</li>
+<li>环海公路 — 中国最美沿海公路之一</li>
+</ul>
+<span class="day-tag">🏨 住宿：青岛四钻酒店 · 含酒店早餐</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 6</div>
+<div class="day-content">
+<h3>青岛 · 城市精华</h3>
+<ul>
+<li>八大关 — 万国建筑群，最美街道</li>
+<li>青岛啤酒博物馆 — 百年啤酒文化</li>
+<li>五月的风 + 奥帆中心夜景灯光秀</li>
+<li>台东夜市 — 青岛最热闹美食街</li>
+</ul>
+<span class="day-tag">🏨 住宿：青岛四钻酒店 · 含酒店早餐</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 7</div>
+<div class="day-content">
+<h3>青岛 · 地道烟火</h3>
+<ul>
+<li>青岛早市 — 感受山东人的烟火气息</li>
+<li>栈桥 — 青岛地标，喂海鸥</li>
+<li>圣弥厄尔大教堂 — 哥特式建筑</li>
+<li>大鲍岛文化创意区（2小时）</li>
+<li>明月山海间不夜城 — 夜景打卡</li>
+</ul>
+<span class="day-tag">🏨 住宿：青岛四钻酒店 · 含酒店早餐</span>
+</div>
+</div>
+
+<div class="day-card">
+<div class="day-label">Day 8</div>
+<div class="day-content">
+<h3>青岛返程 · 满载回忆</h3>
+<ul>
+<li>睡个懒觉，享用早餐</li>
+<li>根据航班时间前往胶东国际机场</li>
+<li>带着美好回忆，返回温暖的家</li>
+</ul>
+<span class="day-tag">✈️ 返程 · 全程结束</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- INCLUDES -->
+<section class="section">
+<div class="container">
+<div class="section-label">服务标准</div>
+<h2 class="section-title">全程无忧，这些我们都包了</h2>
+<p class="section-subtitle">你只需要带上好心情，剩下的交给我们。</p>
+<div class="includes-grid">
+<div class="include-card">
+<div class="include-icon">🧑‍💼</div>
+<div>
+<h4>专业导游</h4>
+<p>持国导证讲解服务型导游，全程陪同讲解</p>
+</div>
+</div>
+<div class="include-card">
+<div class="include-icon">🎫</div>
+<div>
+<h4>景点门票</h4>
+<p>含行程所标注景点大门票及索道、游船费用</p>
+</div>
+</div>
+<div class="include-card">
+<div class="include-icon">🏨</div>
+<div>
+<h4>高档住宿</h4>
+<p>7晚携程四钻高档型酒店，含自助早餐</p>
+</div>
+</div>
+<div class="include-card">
+<div class="include-icon">🚌</div>
+<div>
+<h4>舒适交通</h4>
+<p>全程空调旅游大巴，舒适安全</p>
+</div>
+</div>
+<div class="include-card">
+<div class="include-icon">🍽️</div>
+<div>
+<h4>精选美食</h4>
+<p>行程含多顿特色餐饮，品尝地道山东味道</p>
+</div>
+</div>
+<div class="include-card">
+<div class="include-icon">💎</div>
+<div>
+<h4>品质保障</h4>
+<p>正规旅行社操作，行程透明，无隐形消费</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section-dark">
+<div class="container">
+<div class="section-label">美图预览</div>
+<h2 class="section-title">每一站，都值得被记录</h2>
+<p class="section-subtitle">提前感受一下山东半岛的风景之美。</p>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="shandong-images/qingdao_hero.jpg" alt="青岛栈桥 Day7"></div>
+<div class="gallery-item"><img src="shandong-images/penglai.jpg" alt="蓬莱阁 Day2"></div>
+<div class="gallery-item"><img src="shandong-images/qingdao_hero.jpg" alt="刘公岛 Day4"></div>
+<div class="gallery-item"><img src="shandong-images/laoshan.jpg" alt="崂山仰口 Day5"></div>
+<div class="gallery-item"><img src="shandong-images/qingdao_hero.jpg" alt="八大关 Day6"></div>
+<div class="gallery-item"><img src="shandong-images/penglai.jpg" alt="奥帆中心 Day6"></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark cta-section">
+<div class="container">
+<h2>11月山东半岛之旅<br>名额有限，立即预订</h2>
+<p>扫描二维码或点击按钮，直接WhatsApp联系我们。</p>
+<a href="https://wa.me/60167012960?text=您好！我想咨询山东半岛8天7夜旅游行程" class="cta-whatsapp" target="_blank">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.607-1.262A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.1 0-4.065-.67-5.666-1.817l-.407-.275-3.067.834.818-2.992-.29-.417A9.727 9.727 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+WhatsApp Mis Evan
+</a>
+<div class="cta-sub">📱 016-7012960 · 马来西亚沙巴 · 专业旅游顾问</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<p>© 2026 山东半岛深度游 · Mis Evan Travel · WhatsApp: 016-7012960</p>
+<p style="margin-top:8px;font-size:12px">正规旅行社操作 · 携程四钻酒店 · 全程无忧保障</p>
+</div>
+</footer>
+
+<script>
+// Scroll reveal - with immediate fallback for non-scrolling viewers
+const els = document.querySelectorAll('.day-card,.include-card,.highlight-card,.gallery-item');
+els.forEach(el=>{
+el.style.opacity='0';
+el.style.transform='translateY(24px)';
+el.style.transition='opacity .5s ease-out,transform .5s ease-out';
+});
+// Force show all if IntersectionObserver not supported or page is very short
+if(!window.IntersectionObserver){els.forEach(el=>{el.style.opacity='1';el.style.transform='translateY(0)'});}
+else{
+const obs=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';obs.unobserve(e.target);}
+});
+},{threshold:0.05});
+els.forEach(el=>obs.observe(el));
+// Fallback: show all after 2s in case observer doesn't fire
+setTimeout(()=>els.forEach(el=>{el.style.opacity='1';el.style.transform='translateY(0)'}),2000);
+}
+</script>
+</body>
+</html>
