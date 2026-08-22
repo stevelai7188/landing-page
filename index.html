@@ -995,6 +995,7 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('cli
 // form: submit to Web3Forms if key set; fallback to WhatsApp with prefilled lead info
 const WA_NUM = "60187642198";
 document.getElementById('auditForm').addEventListener('submit', async e=>{
+  e.preventDefault();
   const key = document.getElementById('w3fKey').value.trim();
   const fd = new FormData(e.target);
   if (key) {
