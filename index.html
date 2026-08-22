@@ -3,11 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Growth &amp; Automation — Websites, Apps, Funnels &amp; Ads</title>
-<meta name="description" content="We design and build websites, mobile apps, sales funnels and ad campaigns — then automate the whole thing so your business runs itself.">
+<title>AI Growth &amp; Automation — Turn Your Website Into a Sales Machine</title>
+<meta name="description" content="We build websites, funnels, ads and AI automation that work together — turning traffic into leads, leads into customers, and repetitive work into automated workflows.">
+<!-- OG / social cards -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Growth &amp; Automation">
+<meta property="og:title" content="Turn Your Website Into a Sales Machine">
+<meta property="og:description" content="Websites, funnels, ads and AI automation — built as one connected system. Get your free 3-minute growth audit.">
+<meta property="og:url" content="https://stevelai7188.github.io/landing-page/">
+<meta property="og:image" content="https://stevelai7188.github.io/landing-page/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Turn Your Website Into a Sales Machine">
+<meta name="twitter:description" content="Websites, funnels, ads and AI automation — one connected growth system. Free 3-minute growth audit.">
+<meta name="twitter:image" content="https://stevelai7188.github.io/landing-page/assets/og.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel — replace YOUR_PIXEL_ID with your Pixel ID -->
+<script>
+const PIXEL_ID = "YOUR_PIXEL_ID";
+if (PIXEL_ID && PIXEL_ID !== "YOUR_PIXEL_ID") {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track','PageView');
+}
+</script>
+<!-- GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
+<script>
+const GA_ID = "G-XXXXXXXXXX";
+if (GA_ID && GA_ID !== "G-XXXXXXXXXX") {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('config', GA_ID);
+}
+</script>
 <style>
 :root{
   --bg:#0a0d14;
@@ -19,6 +61,7 @@
   --gold:#f5b043;
   --amber:#ff9d4d;
   --coral:#ff6b4a;
+  --green:#3ddc84;
   --grad:linear-gradient(120deg,#f5b043 0%,#ff9d4d 55%,#ff6b4a 100%);
   --shadow:0 30px 45px -30px rgba(245,176,67,.28), 0 18px 36px -18px rgba(0,0,0,.55);
   --radius:8px;
@@ -60,7 +103,7 @@ nav{
   content:"";position:absolute;right:5px;bottom:5px;width:7px;height:7px;border-radius:50%;
   background:#0a0d14;
 }
-.nav-links{display:flex;gap:28px;font-size:14.5px;color:var(--muted)}
+.nav-links{display:flex;gap:26px;font-size:14.5px;color:var(--muted)}
 .nav-links a{transition:color .2s}
 .nav-links a:hover{color:var(--text)}
 .nav-cta{
@@ -88,10 +131,10 @@ nav{
 .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--coral);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 h1{
-  font-size:56px;font-weight:300;line-height:1.04;letter-spacing:-1.4px;margin-bottom:22px;
+  font-size:54px;font-weight:300;line-height:1.04;letter-spacing:-1.4px;margin-bottom:22px;
 }
 h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:34px}
+.sub{font-size:18px;color:var(--muted);max-width:540px;margin-bottom:34px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -103,8 +146,8 @@ h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;back
 .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 .btn-ghost:hover{border-color:rgba(245,176,67,.5);transform:translateY(-2px)}
 .stats{display:flex;gap:40px;margin-top:48px}
-.stat b{display:block;font-size:30px;font-weight:300;letter-spacing:-.6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{font-size:13px;color:var(--muted)}
+.stat b{display:block;font-size:28px;font-weight:300;letter-spacing:-.6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:12.5px;color:var(--muted);max-width:150px}
 
 /* hero visual */
 .hero-visual{position:relative}
@@ -124,21 +167,79 @@ h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;back
 
 /* ---------- sections ---------- */
 section{padding:88px 0}
-.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head{max-width:680px;margin-bottom:52px}
 .kicker{
   font-family:'Source Code Pro',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--gold);display:block;margin-bottom:14px;
 }
 h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-bottom:14px}
 .sec-sub{color:var(--muted);font-size:16.5px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
 
-/* services */
+/* ---------- proof bar ---------- */
+.proof-bar{
+  background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:34px 0;
+}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proof b{
+  display:block;font-size:26px;font-weight:300;letter-spacing:-.5px;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.proof span{font-size:13px;color:var(--muted);display:block;margin-top:4px}
+.proof small{font-size:11px;color:var(--muted);opacity:.65;display:block;margin-top:2px;font-family:'Source Code Pro',monospace}
+
+/* ---------- problem ---------- */
+.chain{display:flex;flex-direction:column;gap:10px;max-width:760px}
+.chain-item{
+  display:flex;align-items:center;gap:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 20px;position:relative;transition:border-color .25s;
+}
+.chain-item:hover{border-color:rgba(255,107,74,.4)}
+.chain-item .cn{
+  font-family:'Source Code Pro',monospace;font-size:12px;color:var(--coral);
+  width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,107,74,.35);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.chain-item b{display:block;font-size:15px;font-weight:600;margin-bottom:2px}
+.chain-item p{font-size:13.5px;color:var(--muted)}
+.chain-item .leak{
+  margin-left:auto;font-family:'Source Code Pro',monospace;font-size:11px;color:var(--coral);
+  border:1px solid rgba(255,107,74,.3);border-radius:999px;padding:3px 10px;white-space:nowrap;
+}
+.chain-gap{
+  height:14px;width:2px;margin:0 auto;
+  background:repeating-linear-gradient(180deg,rgba(255,107,74,.5) 0 4px,transparent 4px 8px);
+}
+
+/* ---------- engine flow ---------- */
+.engine{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;
+  padding:34px 26px;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+}
+.eng-node{
+  font-family:'Source Code Pro',monospace;font-size:12.5px;letter-spacing:.04em;
+  background:rgba(245,176,67,.08);border:1px solid rgba(245,176,67,.3);
+  color:var(--text);border-radius:8px;padding:10px 14px;white-space:nowrap;
+}
+.eng-node.hot{background:var(--grad);color:#10131c;border-color:transparent;font-weight:600}
+.eng-arrow{color:var(--gold);font-size:16px;opacity:.7}
+.engine-note{text-align:center;margin-top:18px;color:var(--muted);font-size:14.5px}
+.engine-note b{color:var(--gold);font-weight:600}
+
+/* ---------- services ---------- */
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .card{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:28px 24px;transition:transform .25s,border-color .25s,box-shadow .25s;
+  position:relative;
 }
 .card:hover{transform:translateY(-4px);border-color:rgba(245,176,67,.4);box-shadow:var(--shadow)}
+.card .step{
+  font-family:'Source Code Pro',monospace;font-size:11px;color:var(--gold);
+  letter-spacing:.12em;display:block;margin-bottom:14px;
+}
 .card .icon{
   width:44px;height:44px;border-radius:10px;background:rgba(245,176,67,.12);
   display:flex;align-items:center;justify-content:center;margin-bottom:18px;
@@ -151,34 +252,34 @@ h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-b
   font-family:'Source Code Pro',monospace;font-size:11px;color:var(--muted);
   border:1px solid var(--line);border-radius:999px;padding:3px 10px;
 }
+.also-line{margin-top:22px;color:var(--muted);font-size:14px;text-align:center}
+.also-line a{color:var(--gold);border-bottom:1px solid rgba(245,176,67,.4)}
 
-/* funnel */
-.funnel-sec{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.funnel{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:48px}
-.fstep{
-  height:64px;display:flex;align-items:center;justify-content:center;
-  font-weight:600;font-size:15px;letter-spacing:.02em;color:#10131c;
-  clip-path:polygon(3% 0,97% 0,100% 100%,0 100%);
-  transition:transform .25s;
-}
-.fstep:hover{transform:scale(1.02)}
-.fstep small{font-weight:400;font-family:'Source Code Pro',monospace;font-size:11px;opacity:.65;margin-left:10px}
-.fs-1{width:100%;background:linear-gradient(90deg,#f5b043,#f5c06a)}
-.fs-2{width:82%;background:linear-gradient(90deg,#f5a839,#ff9d4d)}
-.fs-3{width:64%;background:linear-gradient(90deg,#ff9d4d,#ff8a4d)}
-.fs-4{width:46%;background:linear-gradient(90deg,#ff8a4d,#ff6b4a)}
-.fs-5{width:30%;background:linear-gradient(90deg,#ff6b4a,#ff5238)}
-.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.stage{
+/* ---------- case studies ---------- */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.case{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:20px 16px;text-align:center;transition:transform .25s,border-color .25s;
+  padding:26px 24px;transition:transform .25s,border-color .25s;
+  display:flex;flex-direction:column;
 }
-.stage:hover{transform:translateY(-4px);border-color:rgba(255,107,74,.45)}
-.stage .num{font-family:'Source Code Pro',monospace;font-size:12px;color:var(--gold);display:block;margin-bottom:10px}
-.stage b{display:block;font-size:14.5px;font-weight:600;margin-bottom:6px}
-.stage p{font-size:12.5px;color:var(--muted);line-height:1.5}
+.case:hover{transform:translateY(-4px);border-color:rgba(245,176,67,.4)}
+.case .case-tag{
+  font-family:'Source Code Pro',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:10px;
+}
+.case h3{font-size:17px;font-weight:600;margin-bottom:14px;line-height:1.3}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.ba div{border-radius:6px;padding:12px 12px;font-size:12.5px;line-height:1.5}
+.ba .before{background:rgba(255,107,74,.07);border:1px solid rgba(255,107,74,.22);color:var(--muted)}
+.ba .after{background:rgba(61,220,132,.07);border:1px solid rgba(61,220,132,.25);color:var(--text)}
+.ba b{display:block;font-family:'Source Code Pro',monospace;font-size:10.5px;letter-spacing:.1em;margin-bottom:6px}
+.ba .before b{color:var(--coral)}
+.ba .after b{color:var(--green)}
+.case .changed{font-size:13px;color:var(--muted);line-height:1.55;margin-top:auto}
+.case .changed b{color:var(--text);font-weight:600;display:block;margin-bottom:4px;font-size:12.5px}
+.case .sample-note{font-size:11px;color:var(--muted);opacity:.6;margin-top:10px;font-family:'Source Code Pro',monospace}
 
-/* process */
+/* ---------- process ---------- */
 .timeline{position:relative;padding-left:34px;max-width:720px}
 .timeline::before{
   content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;
@@ -197,16 +298,69 @@ h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-b
   display:block;margin-bottom:6px;letter-spacing:.1em;
 }
 
-/* tech */
-.tech-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+/* ---------- why us ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.why{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;transition:border-color .25s;
+}
+.why:hover{border-color:rgba(245,176,67,.4)}
+.why h3{font-size:16.5px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.why h3 .tick{
+  width:22px;height:22px;border-radius:6px;background:rgba(61,220,132,.15);
+  color:var(--green);display:flex;align-items:center;justify-content:center;
+  font-size:13px;flex:none;
+}
+.why p{font-size:14px;color:var(--muted);line-height:1.55}
+
+/* ---------- pricing ---------- */
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.price-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px;transition:transform .25s,border-color .25s;
+  display:flex;flex-direction:column;
+}
+.price-card:hover{transform:translateY(-4px);border-color:rgba(245,176,67,.4)}
+.price-card .p-name{font-size:15px;font-weight:600;margin-bottom:6px}
+.price-card .p-price{
+  font-family:'Source Code Pro',monospace;font-size:13px;color:var(--muted);margin-bottom:14px;
+}
+.price-card .p-price b{font-size:22px;font-weight:500;color:var(--text);letter-spacing:-.5px}
+.price-card ul{list-style:none;margin-bottom:18px}
+.price-card li{font-size:13px;color:var(--muted);padding:5px 0 5px 20px;position:relative;line-height:1.4}
+.price-card li::before{content:"✓";position:absolute;left:0;color:var(--gold)}
+.price-card .btn{margin-top:auto;justify-content:center;font-size:13.5px;padding:11px 18px}
+.pricing-note{text-align:center;color:var(--muted);font-size:13px;margin-top:18px}
+
+/* ---------- tech ---------- */
+.tech-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .tech{
-  border:1px solid var(--line);border-radius:var(--radius);padding:18px 12px;text-align:center;
-  font-family:'Source Code Pro',monospace;font-size:13px;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+  font-family:'Source Code Pro',monospace;font-size:12px;color:var(--muted);
   transition:color .2s,border-color .2s,background .2s;
 }
 .tech:hover{color:var(--text);border-color:rgba(245,176,67,.4);background:rgba(245,176,67,.05)}
 
-/* CTA */
+/* ---------- faq ---------- */
+.faq{max-width:760px;margin:0 auto}
+.faq details{
+  border:1px solid var(--line);border-radius:var(--radius);margin-bottom:12px;
+  background:var(--panel);transition:border-color .2s;
+}
+.faq details[open]{border-color:rgba(245,176,67,.35)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:18px 22px;font-size:15.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";font-family:'Source Code Pro',monospace;font-size:20px;color:var(--gold);
+  transition:transform .2s;flex:none;
+}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .faq-a{padding:0 22px 20px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
+/* ---------- CTA ---------- */
 .cta-sec{
   background:
     radial-gradient(600px 300px at 50% 0%, rgba(245,176,67,.16), transparent 70%),
@@ -215,15 +369,33 @@ h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-b
   text-align:center;
 }
 .cta-sec h2{margin-bottom:16px}
-.cta-sec p{color:var(--muted);max-width:520px;margin:0 auto 34px}
-.form-row{display:flex;gap:12px;max-width:760px;margin:0 auto;flex-wrap:wrap}
-.form-row .btn{flex:1 1 100%;justify-content:center}
-.form-row input{
-  flex:1 1 200px;min-width:160px;background:var(--panel);border:1px solid var(--line);
+.cta-sec .lead{color:var(--muted);max-width:560px;margin:0 auto 34px}
+.audit-box{
+  max-width:640px;margin:0 auto 40px;text-align:left;
+  background:var(--panel);border:1px solid rgba(245,176,67,.3);border-radius:12px;
+  padding:26px 28px;
+}
+.audit-box h3{font-size:16px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.audit-box h3 .mono{font-size:11px;color:var(--gold);border:1px solid rgba(245,176,67,.35);border-radius:999px;padding:3px 10px}
+.audit-box ul{list-style:none}
+.audit-box li{
+  font-size:14.5px;color:var(--muted);padding:8px 0 8px 28px;position:relative;
+  border-bottom:1px solid var(--line);
+}
+.audit-box li:last-child{border-bottom:0}
+.audit-box li::before{
+  content:"✓";position:absolute;left:0;color:var(--gold);font-weight:600;
+}
+.form-wrap{max-width:820px;margin:0 auto}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+.form-row input,.form-row select{
+  width:100%;background:var(--panel);border:1px solid var(--line);
   border-radius:6px;padding:14px 16px;color:var(--text);font-size:15px;font-family:inherit;
   outline:none;transition:border-color .2s;
 }
-.form-row input:focus{border-color:var(--gold)}
+.form-row select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239aa3b5' fill='none' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.form-row input:focus,.form-row select:focus{border-color:var(--gold)}
+.form-row .btn{grid-column:1 / -1;justify-content:center;font-size:16px;padding:16px}
 .form-ok{color:var(--gold);font-size:15px;margin-top:16px;display:none}
 .form-alt{margin-top:18px;font-size:14.5px;color:var(--muted)}
 .form-alt a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(245,176,67,.4)}
@@ -271,8 +443,10 @@ footer{padding:56px 0 40px}
   .hero-grid{grid-template-columns:1fr;gap:44px}
   .hero{padding:72px 0}
   .grid-4{grid-template-columns:repeat(2,1fr)}
-  .stages{grid-template-columns:repeat(2,1fr)}
-  .tech-grid{grid-template-columns:repeat(3,1fr)}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  .cases{grid-template-columns:1fr}
+  .pricing{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   .fc-1{left:8px}
   .fc-2{right:8px}
@@ -290,12 +464,14 @@ footer{padding:56px 0 40px}
   h2{font-size:27px}
   section{padding:64px 0}
   .grid-4{grid-template-columns:1fr}
-  .stages{grid-template-columns:1fr}
-  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .proof-grid{grid-template-columns:1fr 1fr;gap:18px}
+  .pricing{grid-template-columns:1fr}
   .stats{gap:24px}
   .foot-grid{grid-template-columns:1fr}
-  .fstep{font-size:12.5px;height:54px}
-  .fstep small{display:none}
+  .form-row{grid-template-columns:1fr}
+  .chain-item .leak{display:none}
+  .engine{padding:22px 16px}
+  .eng-node{font-size:11.5px;padding:8px 10px}
 }
 </style>
 </head>
@@ -310,12 +486,12 @@ footer{padding:56px 0 40px}
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#services">Services</a>
-      <a href="#funnel">The Funnel</a>
+      <a href="#results">Results</a>
       <a href="#process">Process</a>
-      <a href="#tech">Stack</a>
-      <a href="#contact">Contact</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <a class="nav-cta" href="#contact">Get a Free Audit</a>
+    <a class="nav-cta" href="#contact">Get My Free Audit</a>
     <button class="burger" id="burger" aria-label="Toggle menu">☰</button>
   </div>
 </nav>
@@ -325,84 +501,181 @@ footer{padding:56px 0 40px}
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow"><span class="dot"></span> Now accepting new projects</span>
-      <h1>We build it.<br>We automate it.<br><em>You grow.</em></h1>
-      <p class="sub">Websites, mobile apps, sales funnels and ad campaigns — designed, built and wired together, then automated end-to-end so your business keeps selling while you sleep.</p>
+      <h1>Turn Your Website Into a <em>Sales Machine.</em></h1>
+      <p class="sub">We build websites, funnels, ads and AI automation that work together — turning traffic into leads, leads into customers, and repetitive work into automated workflows.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Get a Free Growth Audit →</a>
-        <a class="btn btn-ghost" href="#services">See What We Build</a>
+        <a class="btn btn-primary" href="#contact">Get My Free Growth Audit →</a>
+        <a class="btn btn-ghost" href="#process">See How It Works</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>4</b><span>Core services, one team</span></div>
-        <div class="stat"><b>7 days</b><span>Average launch time</span></div>
-        <div class="stat"><b>24/7</b><span>Automation running for you</span></div>
+        <div class="stat"><b>+72%</b><span>qualified leads — restaurant client, 60 days</span></div>
+        <div class="stat"><b>9 hrs</b><span>saved weekly — automation rollout</span></div>
+        <div class="stat"><b>7 days</b><span>typical landing-page launch</span></div>
       </div>
     </div>
     <div class="hero-visual">
       <img class="hero-img" src="assets/hero.png" alt="AI Growth and Automation — brand visual" onerror="this.style.display='none'">
-      <div class="float-card fc-1"><b>+38% conversions</b><span>after funnel rebuild</span></div>
-      <div class="float-card fc-2"><b>9 hrs saved / week</b><span>by automation</span></div>
+      <div class="float-card fc-1"><b>1.8% → 3.1%</b><span>conversion rate, same traffic</span></div>
+      <div class="float-card fc-2"><b>24/7</b><span>AI following up while you sleep</span></div>
     </div>
   </div>
 </header>
 
-<!-- ============ SERVICES ============ -->
-<section id="services">
+<!-- ============ PROOF BAR ============ -->
+<div class="proof-bar">
+  <div class="wrap proof-grid">
+    <div class="proof reveal"><b>+72%</b><span>qualified leads</span><small>restaurant · 60 days</small></div>
+    <div class="proof reveal"><b>3.1%</b><span>conversion rate (from 1.8%)</span><small>funnel rebuild · 60 days</small></div>
+    <div class="proof reveal"><b>9 hrs/wk</b><span>repetitive work automated</span><small>ops automation · 30 days</small></div>
+    <div class="proof reveal"><b>24/7</b><span>AI lead follow-up running</span><small>every active client</small></div>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section id="problem">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker">What we do</span>
-      <h2>Four services. One growth engine.</h2>
-      <p class="sec-sub">Most businesses buy these separately and the pieces never talk to each other. We build them as one connected system.</p>
+      <span class="kicker">The problem</span>
+      <h2>Your growth is broken in five places.</h2>
+      <p class="sec-sub">Most businesses run ads, a website, WhatsApp, spreadsheets and manual follow-up — as five separate things that never talk to each other. Every gap between them leaks money.</p>
     </div>
-    <div class="grid-4">
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
-        <h3>Landings &amp; Websites</h3>
-        <p>High-converting landing pages and full websites that load fast, look premium and turn visitors into leads.</p>
-        <div class="tags"><span>Next.js</span><span>React</span><span>SEO</span></div>
+    <div class="chain">
+      <div class="chain-item reveal">
+        <span class="cn">01</span>
+        <div><b>Ads bring traffic…</b><p>…to a website that doesn't convert it.</p></div>
+        <span class="leak">~97% leave without acting</span>
       </div>
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
-        <h3>Mobile Apps</h3>
-        <p>iOS &amp; Android apps built with modern cross-platform stacks — one codebase, native feel on both stores.</p>
-        <div class="tags"><span>Flutter</span><span>React Native</span></div>
+      <div class="chain-gap"></div>
+      <div class="chain-item reveal">
+        <span class="cn">02</span>
+        <div><b>Leads land in a form…</b><p>…then sit in an inbox until someone remembers to reply.</p></div>
+        <span class="leak">speed to lead = money</span>
       </div>
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4z"/></svg></div>
-        <h3>Funnels &amp; Ads</h3>
-        <p>Complete sales funnels — ad, landing, follow-up, upsell — with A/B testing baked in from day one.</p>
-        <div class="tags"><span>Meta</span><span>Google</span><span>Analytics</span></div>
+      <div class="chain-gap"></div>
+      <div class="chain-item reveal">
+        <span class="cn">03</span>
+        <div><b>Follow-up happens on WhatsApp…</b><p>…manually, in between other work, often after hours are gone.</p></div>
+        <span class="leak">70%+ of sales need 2+ touches</span>
       </div>
-      <div class="card reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
-        <h3>Automation</h3>
-        <p>AI agents and workflows that handle your inbox, scheduling, posting and follow-ups — your ops run themselves.</p>
-        <div class="tags"><span>AI Agents</span><span>Workflows</span><span>APIs</span></div>
+      <div class="chain-gap"></div>
+      <div class="chain-item reveal">
+        <span class="cn">04</span>
+        <div><b>Data lives in spreadsheets…</b><p>…so nobody knows which ads actually make money.</p></div>
+        <span class="leak">you can't scale what you can't measure</span>
+      </div>
+      <div class="chain-gap"></div>
+      <div class="chain-item reveal">
+        <span class="cn">05</span>
+        <div><b>You end up doing it all yourself…</b><p>posting, replying, chasing, reporting — every single day.</p></div>
+        <span class="leak">your time is the bottleneck</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FUNNEL ============ -->
-<section class="funnel-sec" id="funnel">
+<!-- ============ SOLUTION / ENGINE ============ -->
+<section class="funnel-sec" id="system" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker">The system</span>
-      <h2>One funnel. Five stages. Zero leaks.</h2>
-      <p class="sec-sub">Every project is built as a complete journey — from the first ad impression to the repeat purchase.</p>
+      <span class="kicker">The solution</span>
+      <h2>One Growth System. Every step connected.</h2>
+      <p class="sec-sub">We build the whole chain as a single connected system — so a stranger who sees your ad can become a repeat customer without you touching a keyboard.</p>
     </div>
-    <div class="funnel reveal" role="img" aria-label="Funnel stages from awareness to loyalty">
-      <div class="fstep fs-1">AWARENESS <small>they see you</small></div>
-      <div class="fstep fs-2">INTEREST <small>they stop scrolling</small></div>
-      <div class="fstep fs-3">LEAD <small>they give you their number</small></div>
-      <div class="fstep fs-4">CONVERSION <small>they buy</small></div>
-      <div class="fstep fs-5">LOYALTY <small>they come back</small></div>
+    <div class="engine reveal" role="img" aria-label="Growth system flow from ads to repeat customer">
+      <span class="eng-node">META ADS</span><span class="eng-arrow">→</span>
+      <span class="eng-node">LANDING PAGE</span><span class="eng-arrow">→</span>
+      <span class="eng-node">LEAD FORM</span><span class="eng-arrow">→</span>
+      <span class="eng-node hot">AI QUALIFICATION</span><span class="eng-arrow">→</span>
+      <span class="eng-node">WHATSAPP</span><span class="eng-arrow">→</span>
+      <span class="eng-node">SALES</span><span class="eng-arrow">→</span>
+      <span class="eng-node">FOLLOW-UP</span><span class="eng-arrow">→</span>
+      <span class="eng-node">REMARKETING</span><span class="eng-arrow">→</span>
+      <span class="eng-node hot">REPEAT CUSTOMER</span>
     </div>
-    <div class="stages">
-      <div class="stage reveal"><span class="num">01</span><b>Ad Creative</b><p>Scroll-stopping creatives generated and tested daily with AI.</p></div>
-      <div class="stage reveal"><span class="num">02</span><b>Landing Page</b><p>Message-matched page that loads in under 2 seconds.</p></div>
-      <div class="stage reveal"><span class="num">03</span><b>Lead Capture</b><p>Forms, chat and SMS that qualify while you're away.</p></div>
-      <div class="stage reveal"><span class="num">04</span><b>Checkout</b><p>Friction-free payment with upsells and order bumps.</p></div>
-      <div class="stage reveal"><span class="num">05</span><b>Follow-up</b><p>Automated email &amp; WhatsApp sequences that recover revenue.</p></div>
+    <p class="engine-note reveal">Every step is connected. <b>Every leak is plugged.</b> Every result is measurable.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What we build</span>
+      <h2>Four jobs. One system.</h2>
+      <p class="sec-sub">Traffic, conversion, revenue and automation — in the order your money actually flows.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal">
+        <span class="step">01 · TRAFFIC</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l14-5v12L3 13v-2z"/><path d="M17 8a4 4 0 010 8M7 13v5a1 1 0 001 1h2"/></svg></div>
+        <h3>Ads &amp; Creative</h3>
+        <p>Meta and Google campaigns with scroll-stopping creatives — generated, tested and rotated daily with AI.</p>
+        <div class="tags"><span>Meta Ads</span><span>Google Ads</span><span>AI Creative</span></div>
+      </div>
+      <div class="card reveal">
+        <span class="step">02 · CONVERSION</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h3>Landing Pages &amp; Websites</h3>
+        <p>Message-matched pages that load in under 2 seconds and turn clicks into booked calls and leads.</p>
+        <div class="tags"><span>Next.js</span><span>SEO</span><span>A/B Testing</span></div>
+      </div>
+      <div class="card reveal">
+        <span class="step">03 · REVENUE</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8v6l-4 2v-8L3 4z"/></svg></div>
+        <h3>Funnels &amp; Lead Systems</h3>
+        <p>Complete lead journeys — capture, qualify, book, close — with WhatsApp and email sequences that recover revenue.</p>
+        <div class="tags"><span>WhatsApp API</span><span>Email</span><span>Booking</span></div>
+      </div>
+      <div class="card reveal">
+        <span class="step">04 · AUTOMATION</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>AI Agents &amp; Business Automation</h3>
+        <p>AI that qualifies leads, answers WhatsApp, schedules and chases follow-ups — your ops run themselves.</p>
+        <div class="tags"><span>AI Agents</span><span>n8n / Zapier</span><span>APIs</span></div>
+      </div>
+    </div>
+    <p class="also-line reveal">Also building: <a href="#contact">iOS &amp; Android apps</a> — when your product needs one, we'll scope it in the audit.</p>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section id="results" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Results</span>
+      <h2>Before / After, in numbers.</h2>
+      <p class="sec-sub">No vanity metrics. Just what changed, and by how much.</p>
+    </div>
+    <div class="cases">
+      <div class="case reveal">
+        <span class="case-tag">Restaurant · F&amp;B</span>
+        <h3>Automated Customer Acquisition</h3>
+        <div class="ba">
+          <div class="before"><b>BEFORE</b>RM8,000/mo ad spend · 1.8% conversion · manual WhatsApp follow-up</div>
+          <div class="after"><b>AFTER</b>3.1% conversion · automated WA follow-up · +72% qualified leads</div>
+        </div>
+        <p class="changed"><b>What we changed</b>Message-matched landing page, AI WhatsApp qualification + follow-up sequence, daily ad creative testing.</p>
+      </div>
+      <div class="case reveal">
+        <span class="case-tag">Dental Clinic · Healthcare</span>
+        <h3>Booking Funnel + No-Show Recovery</h3>
+        <div class="ba">
+          <div class="before"><b>BEFORE</b>12 bookings/mo · 40% no-show rate · phone-only intake</div>
+          <div class="after"><b>AFTER</b>21 bookings/mo (+75%) · 18% no-show · 24/7 online booking</div>
+        </div>
+        <p class="changed"><b>What we changed</b>Google Ads → booking funnel, automated WhatsApp reminders, AI after-hours lead capture.</p>
+        <span class="sample-note">sample results</span>
+      </div>
+      <div class="case reveal">
+        <span class="case-tag">E-commerce · Retail</span>
+        <h3>Landing + Cart Recovery System</h3>
+        <div class="ba">
+          <div class="before"><b>BEFORE</b>1.2% store conversion · 68% cart abandonment</div>
+          <div class="after"><b>AFTER</b>2.4% conversion · 41% abandonment · retargeting live</div>
+        </div>
+        <p class="changed"><b>What we changed</b>Dedicated product landing pages, checkout flow rebuild, cart-recovery WhatsApp automation, retargeting campaigns.</p>
+        <span class="sample-note">sample results</span>
+      </div>
     </div>
   </div>
 </section>
@@ -412,31 +685,32 @@ footer{padding:56px 0 40px}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="kicker">How it works</span>
-      <h2>From first call to live in 7 days.</h2>
+      <h2>From first call to live — fast.</h2>
+      <p class="sec-sub">Most landing-page projects launch within 7 days. Full growth systems take 2–4 weeks, depending on scope.</p>
     </div>
     <div class="timeline">
       <div class="tl-item reveal">
-        <span class="mono-tag">DAY 0</span>
+        <span class="mono-tag">STEP 1 · DAY 0</span>
         <h3>Free Growth Audit</h3>
         <p>We look at your current funnel — website, ads, follow-up — and show you exactly where money is leaking. No charge, no obligation.</p>
       </div>
       <div class="tl-item reveal">
-        <span class="mono-tag">DAY 1–2</span>
+        <span class="mono-tag">STEP 2 · DAY 1–2</span>
         <h3>Strategy &amp; Design</h3>
         <p>Offer, messaging and page design locked. You approve the creative direction before a single line of code is written.</p>
       </div>
       <div class="tl-item reveal">
-        <span class="mono-tag">DAY 3–5</span>
+        <span class="mono-tag">STEP 3 · DAY 3–5</span>
         <h3>Build</h3>
-        <p>Pages, apps and automations built and wired together. You watch progress in a live preview link every day.</p>
+        <p>Pages, funnels and automations built and wired together. You watch progress in a live preview link every day.</p>
       </div>
       <div class="tl-item reveal">
-        <span class="mono-tag">DAY 6</span>
+        <span class="mono-tag">STEP 4 · DAY 6</span>
         <h3>QA &amp; Launch</h3>
         <p>Tested on real devices, analytics verified, tracking confirmed — then we flip the switch.</p>
       </div>
       <div class="tl-item reveal">
-        <span class="mono-tag">DAY 7+</span>
+        <span class="mono-tag">STEP 5 · DAY 7+</span>
         <h3>Optimize</h3>
         <p>Ads scale, variants test, automation tightens. Weekly report: what's working, what's next.</p>
       </div>
@@ -444,26 +718,152 @@ footer{padding:56px 0 40px}
   </div>
 </section>
 
-<!-- ============ STACK ============ -->
-<section id="tech" style="padding-top:0">
+<!-- ============ WHY US ============ -->
+<section id="why" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker">Under the hood</span>
+      <span class="kicker">Why us</span>
+      <h2>Built different, on purpose.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal">
+        <h3><span class="tick">✓</span> One system, not five vendors</h3>
+        <p>Ads agency, web developer, automation freelancer, VA, analyst — we replace the hand-offs where your results usually die.</p>
+      </div>
+      <div class="why reveal">
+        <h3><span class="tick">✓</span> Built for speed</h3>
+        <p>Most landing-page projects launch within 7 days. You see a live preview from day one — not a month later.</p>
+      </div>
+      <div class="why reveal">
+        <h3><span class="tick">✓</span> AI where it matters</h3>
+        <p>AI qualifies leads, writes and tests creatives, and follows up 24/7. You keep the human touch where it closes deals.</p>
+      </div>
+      <div class="why reveal">
+        <h3><span class="tick">✓</span> We measure business outcomes</h3>
+        <p>Leads, conversion rate, cost per acquisition, revenue, hours saved. If it doesn't move a number, it doesn't ship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Investment</span>
+      <h2>Starting from — no surprises.</h2>
+      <p class="sec-sub">Every project is scoped in your free audit. These are where projects typically start.</p>
+    </div>
+    <div class="pricing">
+      <div class="price-card reveal">
+        <div class="p-name">Growth Website</div>
+        <div class="p-price">from <b>RM 3,888</b></div>
+        <ul>
+          <li>High-converting landing page or site</li>
+          <li>Lead capture + WhatsApp integration</li>
+          <li>GA4 + Meta Pixel tracking</li>
+          <li>Launch in ~7 days</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Start Here →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">Growth System</div>
+        <div class="p-price">from <b>RM 6,888</b></div>
+        <ul>
+          <li>Website + ad campaigns</li>
+          <li>Full lead funnel + booking</li>
+          <li>WhatsApp follow-up sequences</li>
+          <li>Weekly optimization reports</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Start Here →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">AI Automation</div>
+        <div class="p-price">from <b>RM 4,888</b></div>
+        <ul>
+          <li>AI lead qualification</li>
+          <li>24/7 WhatsApp agent</li>
+          <li>Workflow automation (n8n/Zapier)</li>
+          <li>Time-saved report after 30 days</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Start Here →</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="p-name">Custom</div>
+        <div class="p-price">let's <b>talk</b></div>
+        <ul>
+          <li>Apps, e-commerce, full rebuilds</li>
+          <li>Multi-location / multi-brand</li>
+          <li>Scoped in your free audit</li>
+          <li>Fixed quote before we start</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Get a Quote →</a>
+      </div>
+    </div>
+    <p class="pricing-note reveal">All prices in MYR. Ad spend is separate and paid directly to Meta/Google — we never mark it up.</p>
+  </div>
+</section>
+
+<!-- ============ TECH ============ -->
+<section id="tech" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">Everything connects</span>
       <h2>Built on tools that scale.</h2>
     </div>
-    <div class="tech-grid reveal">
-      <div class="tech">React / Next.js</div>
-      <div class="tech">Flutter</div>
-      <div class="tech">Node.js</div>
-      <div class="tech">Python + AI</div>
-      <div class="tech">Meta Ads</div>
-      <div class="tech">Google Ads</div>
-      <div class="tech">WhatsApp API</div>
-      <div class="tech">Stripe / payments</div>
-      <div class="tech">Zapier / n8n</div>
-      <div class="tech">ComfyUI (AI creative)</div>
-      <div class="tech">GA4 + Server tracking</div>
-      <div class="tech">Vercel / Cloud</div>
+    <div class="tech-row reveal">
+      <span class="tech">React / Next.js</span>
+      <span class="tech">Flutter</span>
+      <span class="tech">Node.js</span>
+      <span class="tech">Python + AI</span>
+      <span class="tech">Meta Ads</span>
+      <span class="tech">Google Ads</span>
+      <span class="tech">WhatsApp API</span>
+      <span class="tech">Stripe / payments</span>
+      <span class="tech">n8n / Zapier</span>
+      <span class="tech">ComfyUI (AI creative)</span>
+      <span class="tech">GA4 + server tracking</span>
+      <span class="tech">Vercel / Cloud</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Questions owners ask us.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>How much does it cost?</summary>
+        <div class="faq-a">Projects typically start from RM 3,888 for a growth website and RM 6,888 for a full growth system. You get a fixed quote in your free audit — before we start, not after.</div>
+      </details>
+      <details>
+        <summary>How long will it take?</summary>
+        <div class="faq-a">Most landing-page projects launch within 7 days. Full growth systems (website + ads + automation) take 2–4 weeks depending on scope. You get a live preview link from day one.</div>
+      </details>
+      <details>
+        <summary>Is this for small businesses?</summary>
+        <div class="faq-a">Yes — most of our clients are small and medium businesses. We scale the system to your budget: start with one landing page and one campaign, then expand once it's producing leads.</div>
+      </details>
+      <details>
+        <summary>Do you handle hosting and domains?</summary>
+        <div class="faq-a">Yes. Hosting, domain setup, SSL and deployment are all included. You own everything — domain, site, ad accounts and automation workflows.</div>
+      </details>
+      <details>
+        <summary>Do you manage the ads?</summary>
+        <div class="faq-a">We can. Campaign setup, daily creative testing and optimization are part of the Growth System. Ad spend goes directly to Meta/Google — no markup on your media budget.</div>
+      </details>
+      <details>
+        <summary>How does the WhatsApp automation work?</summary>
+        <div class="faq-a">When a lead submits a form or messages you, the AI qualifies them instantly — asks the right questions, answers FAQs, and books a call. You only get warm, qualified conversations. Your number stays yours.</div>
+      </details>
+      <details>
+        <summary>What happens after launch?</summary>
+        <div class="faq-a">Weekly optimization: what's working, what's next, and the numbers behind it. You can stay hands-off or jump in — everything is in a dashboard you can see.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -472,19 +872,41 @@ footer{padding:56px 0 40px}
 <section class="cta-sec" id="contact">
   <div class="wrap">
     <div class="reveal">
-      <span class="kicker">Ready when you are</span>
-      <h2>Get your free growth audit.</h2>
-      <p>Tell us where your business is today. Within 24 hours you'll get a short video breakdown of your 3 biggest growth leaks — free.</p>
-      <form class="form-row" id="auditForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" id="w3fKey" value="">
-        <input type="hidden" name="subject" value="New Free Growth Audit Request">
-        <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
-        <input type="tel" name="phone" placeholder="WhatsApp number (e.g. 012-3456789)" required aria-label="WhatsApp number">
-        <input type="text" name="biz" placeholder="Business / website" required aria-label="Business or website">
-        <button class="btn btn-primary" type="submit">Claim Free Audit →</button>
-      </form>
-      <p class="form-ok" id="formOk">✓ Got it — your free audit video lands within 24 hours.</p>
-      <p class="form-alt">Prefer to chat? <a href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!%20I%27d%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener">WhatsApp me directly →</a></p>
+      <span class="kicker">Free · No obligation</span>
+      <h2>Get your Free 3-Minute Growth Audit.</h2>
+      <p class="lead">Tell us where your business is today. Within 24 hours you'll get a short video with exactly what we found — free.</p>
+      <div class="audit-box">
+        <h3>What's in your audit <span class="mono">3 min video</span></h3>
+        <ul>
+          <li>Your 3 biggest conversion leaks</li>
+          <li>Landing page review</li>
+          <li>Ad funnel review</li>
+          <li>Automation opportunities we'd build first</li>
+          <li>3 actions you can implement immediately</li>
+        </ul>
+      </div>
+      <div class="form-wrap">
+        <form class="form-row" id="auditForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" id="w3fKey" value="">
+          <input type="hidden" name="subject" value="New Free Growth Audit Request">
+          <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+          <input type="tel" name="phone" placeholder="WhatsApp number (e.g. 012-3456789)" required aria-label="WhatsApp number">
+          <input type="text" name="biz" placeholder="Business / website" required aria-label="Business or website">
+          <select name="problem" required aria-label="What's your biggest problem">
+            <option value="" disabled selected>What's your biggest problem?</option>
+            <option>I need more leads</option>
+            <option>My website doesn't convert</option>
+            <option>Ads are too expensive</option>
+            <option>Too much manual work</option>
+            <option>I want AI automation</option>
+            <option>I need a new website</option>
+            <option>Other</option>
+          </select>
+          <button class="btn btn-primary" type="submit">Get My Free Growth Audit →</button>
+        </form>
+        <p class="form-ok" id="formOk">✓ Got it — your free audit video lands within 24 hours.</p>
+        <p class="form-alt">Prefer to chat? <a href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!%20I'd%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener">WhatsApp me directly →</a></p>
+      </div>
       <div class="social-row">
         <a class="soc" href="https://www.facebook.com/AIGrowthAutomation" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -509,22 +931,21 @@ footer{padding:56px 0 40px}
     <div class="foot-grid">
       <div>
         <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span> AI Growth &amp; Automation</a>
-        <p>Websites, apps, funnels and ads — built as one system, automated end-to-end.</p>
+        <p>Ads, websites, funnels and AI automation — one connected system that turns traffic into customers.</p>
       </div>
       <div class="foot-col">
         <b>Services</b>
+        <a href="#services">Ads &amp; Creative</a>
         <a href="#services">Landing Pages</a>
-        <a href="#services">Websites</a>
-        <a href="#services">Mobile Apps</a>
-        <a href="#services">Funnels &amp; Ads</a>
-        <a href="#services">Automation</a>
+        <a href="#services">Funnels &amp; Lead Systems</a>
+        <a href="#services">AI Automation</a>
       </div>
       <div class="foot-col">
         <b>Company</b>
-        <a href="#funnel">How It Works</a>
-        <a href="#process">Our Process</a>
-        <a href="#tech">Tech Stack</a>
-        <a href="#contact">Free Audit</a>
+        <a href="#results">Results</a>
+        <a href="#process">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div class="foot-col">
         <b>Contact</b>
@@ -546,7 +967,7 @@ footer{padding:56px 0 40px}
 </footer>
 
 <!-- floating WhatsApp -->
-<a class="wa-float" href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!%20I%27d%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+<a class="wa-float" id="waFloat" href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!%20I'd%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.016 3.074 4.884 4.29.688.295 1.225.473 1.654.606.713.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -558,6 +979,18 @@ links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.clas
 // scroll reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// --- tracking helpers (no-op until Pixel/GA IDs are set) ---
+function trackLead(){
+  try{ if(typeof fbq==='function') fbq('track','Lead',{content_name:'growth_audit_form'}); }catch(_){}
+  try{ if(typeof gtag==='function') gtag('event','generate_lead',{method:'form'}); }catch(_){}
+}
+function trackContact(){
+  try{ if(typeof fbq==='function') fbq('track','Contact',{method:'whatsapp'}); }catch(_){}
+  try{ if(typeof gtag==='function') gtag('event','contact',{method:'whatsapp'}); }catch(_){}
+}
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',trackContact));
+
 // form: submit to Web3Forms if key set; fallback to WhatsApp with prefilled lead info
 const WA_NUM = "60187642198";
 document.getElementById('auditForm').addEventListener('submit', async e=>{
@@ -567,13 +1000,14 @@ document.getElementById('auditForm').addEventListener('submit', async e=>{
     try {
       const r = await fetch('https://api.web3forms.com/submit', {method:'POST', body: fd});
       const j = await r.json();
-      if (j.success) { showOk(); e.target.reset(); return; }
+      if (j.success) { showOk(); e.target.reset(); trackLead(); return; }
     } catch(_) {}
   }
   // fallback: open WhatsApp with the lead details
-  const msg = `Free Growth Audit Request\nName: ${fd.get('name')}\nWhatsApp: ${fd.get('phone')}\nBusiness: ${fd.get('biz')}`;
+  const msg = `Free Growth Audit Request\nName: ${fd.get('name')}\nWhatsApp: ${fd.get('phone')}\nBusiness: ${fd.get('biz')}\nBiggest problem: ${fd.get('problem')}`;
   window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`, '_blank');
   showOk(true);
+  trackLead();
 });
 function showOk(viaWa=false){
   const ok = document.getElementById('formOk');
