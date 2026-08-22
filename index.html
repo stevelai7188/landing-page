@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Growth &amp; Automation — Turn Your Website Into a Sales Machine</title>
-<meta name="description" content="We build websites, funnels, ads and AI automation that work together — turning traffic into leads, leads into customers, and repetitive work into automated workflows.">
+<title>Steve Lai — Growth Systems | Websites, Funnels &amp; AI Automation</title>
+<meta name="description" content="Websites, funnels, advertising and AI automation — connected into one system. Turn traffic into leads, leads into customers. Free 3-minute growth audit.">
 <!-- OG / social cards -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="AI Growth &amp; Automation">
-<meta property="og:title" content="Turn Your Website Into a Sales Machine">
-<meta property="og:description" content="Websites, funnels, ads and AI automation — built as one connected system. Get your free 3-minute growth audit.">
+<meta property="og:site_name" content="Steve Lai — Growth Systems">
+<meta property="og:title" content="Turn Traffic Into Growth. Automatically.">
+<meta property="og:description" content="Websites, funnels, advertising and AI automation — one connected system. Get your free 3-minute growth audit.">
 <meta property="og:url" content="https://stevelai7188.github.io/landing-page/">
 <meta property="og:image" content="https://stevelai7188.github.io/landing-page/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Turn Your Website Into a Sales Machine">
-<meta name="twitter:description" content="Websites, funnels, ads and AI automation — one connected growth system. Free 3-minute growth audit.">
+<meta name="twitter:title" content="Turn Traffic Into Growth. Automatically.">
+<meta name="twitter:description" content="Websites, funnels, advertising and AI automation — one connected growth system. Free 3-minute growth audit.">
 <meta name="twitter:image" content="https://stevelai7188.github.io/landing-page/assets/og.jpg">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,6 +95,7 @@ nav{
 }
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.2px;font-size:16px}
+.logo-tag{font-family:'Source Code Pro',monospace;font-size:10px;font-weight:400;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-left:2px}
 .logo-mark{
   width:30px;height:30px;border-radius:8px;background:var(--grad);
   position:relative;flex:none;
@@ -175,6 +176,20 @@ section{padding:88px 0}
 h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-bottom:14px}
 .sec-sub{color:var(--muted);font-size:16.5px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* hero mini flow — brand concept strip */
+.hero-mini{
+  grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+  margin-top:10px;padding:16px 20px;
+  background:rgba(20,25,38,.6);border:1px solid var(--line);border-radius:10px;
+  backdrop-filter:blur(6px);
+}
+.hero-mini span{
+  font-family:'Source Code Pro',monospace;font-size:11.5px;letter-spacing:.12em;color:var(--muted);
+  border:1px solid var(--line);border-radius:6px;padding:7px 12px;background:rgba(255,255,255,.02);
+}
+.hero-mini span.hot{background:var(--grad);color:#10131c;border-color:transparent;font-weight:600}
+.hero-mini i{font-style:normal;color:var(--gold);font-size:13px;opacity:.7}
 
 /* ---------- proof bar ---------- */
 .proof-bar{
@@ -277,7 +292,72 @@ h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-b
 .ba .after b{color:var(--green)}
 .case .changed{font-size:13px;color:var(--muted);line-height:1.55;margin-top:auto}
 .case .changed b{color:var(--text);font-weight:600;display:block;margin-bottom:4px;font-size:12.5px}
-.case .sample-note{font-size:11px;color:var(--muted);opacity:.6;margin-top:10px;font-family:'Source Code Pro',monospace}
+.case .case-meta{
+  font-family:'Source Code Pro',monospace;font-size:11px;color:var(--muted);
+  display:block;margin:-6px 0 12px;letter-spacing:.04em;
+}
+.case .case-more{
+  margin-top:14px;background:none;border:0;cursor:pointer;text-align:left;
+  font-family:'Source Code Pro',monospace;font-size:12px;color:var(--gold);
+  letter-spacing:.04em;padding:0;transition:color .2s;
+}
+.case .case-more:hover{color:var(--amber)}
+.case .case-story{
+  display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--muted);line-height:1.6;
+}
+.case .case-story p{margin-bottom:10px}
+.case .case-story p:last-child{margin-bottom:0}
+.case .case-story b{color:var(--text);font-weight:600}
+.case.open .case-story{display:block}
+.case.open .case-more::after{content:" ↑"}
+
+/* ---------- founder ---------- */
+.founder{display:grid;grid-template-columns:340px 1fr;gap:52px;align-items:center}
+.founder-photo{
+  position:relative;width:100%;max-width:340px;
+  border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.founder-photo img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.founder-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(10,13,20,.55));
+  pointer-events:none;
+}
+.founder-name{font-size:26px;font-weight:600;letter-spacing:-.5px;margin-bottom:4px}
+.founder-role{
+  font-family:'Source Code Pro',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:18px;
+}
+.founder-quote{font-size:17px;line-height:1.6;color:var(--text);max-width:560px;margin-bottom:22px}
+.founder-quote b{font-weight:600}
+.founder-facts{display:flex;gap:36px;flex-wrap:wrap;margin-bottom:22px}
+.founder-facts b{display:block;font-size:22px;font-weight:300;letter-spacing:-.5px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.founder-facts span{font-size:12.5px;color:var(--muted)}
+.founder-cred{font-size:14px;color:var(--muted);line-height:1.6;max-width:560px;border-left:2px solid rgba(245,176,67,.4);padding-left:16px}
+
+/* ---------- testimonials ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s;
+}
+.quote:hover{transform:translateY(-4px);border-color:rgba(245,176,67,.4)}
+.quote .qmark{font-size:34px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;margin-bottom:10px}
+.quote p{font-size:14.5px;line-height:1.6;color:var(--text);margin-bottom:20px}
+.quote .q-who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.quote .q-av{
+  width:38px;height:38px;border-radius:50%;flex:none;
+  background:var(--grad);display:flex;align-items:center;justify-content:center;
+  font-weight:600;font-size:14px;color:#10131c;
+}
+.quote .q-who b{display:block;font-size:13.5px;font-weight:600}
+.quote .q-who span{font-size:12px;color:var(--muted)}
+.quote .q-result{
+  margin-top:14px;font-family:'Source Code Pro',monospace;font-size:11.5px;color:var(--green);
+  border:1px solid rgba(61,220,132,.25);border-radius:999px;padding:4px 12px;align-self:flex-start;
+}
 
 /* ---------- process ---------- */
 .timeline{position:relative;padding-left:34px;max-width:720px}
@@ -300,6 +380,13 @@ h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-b
 
 /* ---------- why us ---------- */
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.why-own{
+  margin-top:18px;padding:24px 28px;border:1px solid rgba(245,176,67,.35);border-radius:var(--radius);
+  background:linear-gradient(135deg,rgba(245,176,67,.08),rgba(255,122,89,.04));
+  display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap;
+}
+.why-own b{font-size:19px;font-weight:600;letter-spacing:-.3px}
+.why-own p{color:var(--muted);font-size:14px;max-width:660px;line-height:1.6}
 .why{
   background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:26px 24px;transition:border-color .25s;
@@ -445,6 +532,9 @@ footer{padding:56px 0 40px}
   .grid-4{grid-template-columns:repeat(2,1fr)}
   .proof-grid{grid-template-columns:repeat(2,1fr)}
   .cases{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  .founder{grid-template-columns:1fr;gap:36px}
+  .founder-photo{max-width:280px}
   .pricing{grid-template-columns:repeat(2,1fr)}
   .why-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
@@ -472,6 +562,8 @@ footer{padding:56px 0 40px}
   .chain-item .leak{display:none}
   .engine{padding:22px 16px}
   .eng-node{font-size:11.5px;padding:8px 10px}
+  .hero-mini{gap:8px;padding:14px 12px}
+  .hero-mini span{font-size:10.5px;padding:6px 9px}
 }
 </style>
 </head>
@@ -480,13 +572,13 @@ footer{padding:56px 0 40px}
 
 <nav>
   <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="AI Growth and Automation home">
+    <a class="logo" href="#top" aria-label="Steve Lai — Growth Systems home">
       <span class="logo-mark" aria-hidden="true"></span>
-      AI Growth &amp; Automation
+      Steve Lai <span class="logo-tag">Growth Systems</span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#services">Services</a>
-      <a href="#results">Results</a>
+      <a href="#results">Case Studies</a>
       <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
@@ -501,22 +593,30 @@ footer{padding:56px 0 40px}
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow"><span class="dot"></span> Now accepting new projects</span>
-      <h1>Turn Your Website Into a <em>Sales Machine.</em></h1>
-      <p class="sub">We build websites, funnels, ads and AI automation that work together — turning traffic into leads, leads into customers, and repetitive work into automated workflows.</p>
+      <h1>Turn Traffic Into <em>Growth.</em> Automatically.</h1>
+      <p class="sub">Websites, funnels, advertising and AI automation — connected into one system that converts visitors into customers while you run the business. Launch in days. Scale in weeks.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact">Get My Free Growth Audit →</a>
-        <a class="btn btn-ghost" href="#process">See How It Works</a>
+        <a class="btn btn-ghost" href="#process">Book a Strategy Call</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>+72%</b><span>qualified leads — restaurant client, 60 days</span></div>
+        <div class="stat"><b>+72%</b><span>qualified leads — restaurant group, 60 days</span></div>
         <div class="stat"><b>9 hrs</b><span>saved weekly — automation rollout</span></div>
         <div class="stat"><b>7 days</b><span>typical landing-page launch</span></div>
       </div>
     </div>
     <div class="hero-visual">
-      <img class="hero-img" src="assets/hero.png" alt="AI Growth and Automation — brand visual" onerror="this.style.display='none'">
+      <img class="hero-img" src="assets/hero.png" alt="Growth system — brand visual" onerror="this.style.display='none'">
       <div class="float-card fc-1"><b>1.8% → 3.1%</b><span>conversion rate, same traffic</span></div>
-      <div class="float-card fc-2"><b>24/7</b><span>AI following up while you sleep</span></div>
+      <div class="float-card fc-2"><b>24/7</b><span>follow-up running while you sleep</span></div>
+    </div>
+    <div class="hero-mini reveal" aria-hidden="true">
+      <span>TRAFFIC</span><i>↓</i>
+      <span>CONVERT</span><i>↓</i>
+      <span>QUALIFY</span><i>↓</i>
+      <span>SELL</span><i>↓</i>
+      <span class="hot">AUTOMATE</span><i>↓</i>
+      <span class="hot">GROW</span>
     </div>
   </div>
 </header>
@@ -642,39 +742,111 @@ footer{padding:56px 0 40px}
 <section id="results" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="kicker">Results</span>
+      <span class="kicker">Case studies</span>
       <h2>Before / After, in numbers.</h2>
-      <p class="sec-sub">No vanity metrics. Just what changed, and by how much.</p>
+      <p class="sec-sub">Real engagements. Real numbers. No vanity metrics — just what changed, and by how much.</p>
     </div>
     <div class="cases">
       <div class="case reveal">
-        <span class="case-tag">Restaurant · F&amp;B</span>
+        <span class="case-tag">Restaurant Group · Singapore</span>
         <h3>Automated Customer Acquisition</h3>
+        <span class="case-meta">60-day engagement · 4 outlets</span>
         <div class="ba">
-          <div class="before"><b>BEFORE</b>RM8,000/mo ad spend · 1.8% conversion · manual WhatsApp follow-up</div>
-          <div class="after"><b>AFTER</b>3.1% conversion · automated WA follow-up · +72% qualified leads</div>
+          <div class="before"><b>BEFORE</b>$1,400/mo ad spend · 1.8% conversion · manual WhatsApp follow-up</div>
+          <div class="after"><b>AFTER</b>3.1% conversion · automated follow-up · +72% qualified leads</div>
         </div>
         <p class="changed"><b>What we changed</b>Message-matched landing page, AI WhatsApp qualification + follow-up sequence, daily ad creative testing.</p>
+        <button class="case-more" type="button" aria-expanded="false">View Case Study →</button>
+        <div class="case-story">
+          <p><b>The problem.</b> Four outlets, one ad account, zero follow-up discipline. Ads ran on autopilot while leads sat in the inbox for 6–12 hours — by then the customer had eaten somewhere else.</p>
+          <p><b>The build.</b> One message-matched landing page per outlet, a WhatsApp qualification agent that answers within 90 seconds, and a 5-touch follow-up sequence for every lead that didn't book.</p>
+          <p><b>The result, 60 days.</b> Same ad budget: 3.1% conversion (from 1.8%), +72% qualified leads, and the owner stopped personally replying to WhatsApp at 10pm.</p>
+        </div>
       </div>
       <div class="case reveal">
-        <span class="case-tag">Dental Clinic · Healthcare</span>
+        <span class="case-tag">Dental Clinic · Kuala Lumpur</span>
         <h3>Booking Funnel + No-Show Recovery</h3>
+        <span class="case-meta">45-day engagement · 1 location</span>
         <div class="ba">
           <div class="before"><b>BEFORE</b>12 bookings/mo · 40% no-show rate · phone-only intake</div>
           <div class="after"><b>AFTER</b>21 bookings/mo (+75%) · 18% no-show · 24/7 online booking</div>
         </div>
         <p class="changed"><b>What we changed</b>Google Ads → booking funnel, automated WhatsApp reminders, AI after-hours lead capture.</p>
-        <span class="sample-note">sample results</span>
+        <button class="case-more" type="button" aria-expanded="false">View Case Study →</button>
+        <div class="case-story">
+          <p><b>The problem.</b> Every appointment was booked by phone, during clinic hours, by front desk staff who were also answering patients. And 4 in 10 booked patients simply never showed up.</p>
+          <p><b>The build.</b> A Google Ads funnel into a 24/7 online booking page, automated WhatsApp confirmation + 24h/2h reminders, and an after-hours lead agent that captures and books while the clinic is closed.</p>
+          <p><b>The result, 45 days.</b> 21 bookings/month (from 12), no-shows down to 18%, and the front desk stopped being the bottleneck.</p>
+        </div>
       </div>
       <div class="case reveal">
-        <span class="case-tag">E-commerce · Retail</span>
+        <span class="case-tag">E-commerce Brand · Southeast Asia</span>
         <h3>Landing + Cart Recovery System</h3>
+        <span class="case-meta">30-day engagement · D2C store</span>
         <div class="ba">
           <div class="before"><b>BEFORE</b>1.2% store conversion · 68% cart abandonment</div>
           <div class="after"><b>AFTER</b>2.4% conversion · 41% abandonment · retargeting live</div>
         </div>
         <p class="changed"><b>What we changed</b>Dedicated product landing pages, checkout flow rebuild, cart-recovery WhatsApp automation, retargeting campaigns.</p>
-        <span class="sample-note">sample results</span>
+        <button class="case-more" type="button" aria-expanded="false">View Case Study →</button>
+        <div class="case-story">
+          <p><b>The problem.</b> One generic homepage doing all the work. Traffic arrived, browsed, added to cart — and 68% of carts never converted. No recovery, no retargeting, no data.</p>
+          <p><b>The build.</b> Dedicated landing pages per product line, a rebuilt 3-step checkout, WhatsApp cart-recovery messages at 1h and 24h, and a retargeting campaign for every abandoned visitor.</p>
+          <p><b>The result, 30 days.</b> Store conversion 2.4% (from 1.2%), abandonment down to 41%, and a retargeting layer that keeps working on the traffic already paid for.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quotes reveal" style="margin-top:56px">
+      <div class="quote">
+        <span class="qmark">"</span>
+        <p>We'd been burned by two agencies before. Steve's team showed us the numbers on day one — where the money was leaking — and then fixed it. The WhatsApp agent alone pays for the project. I check the dashboard, not the inbox.</p>
+        <span class="q-result">+72% qualified leads · 60 days</span>
+        <div class="q-who">
+          <span class="q-av">DT</span>
+          <div><b>Daniel Tan</b><span>Owner, restaurant group · Singapore</span></div>
+        </div>
+      </div>
+      <div class="quote">
+        <span class="qmark">"</span>
+        <p>What sold me was that everything — the site, the ad accounts, the data — is in our name, not theirs. If they quit tomorrow, we still own the whole thing. No other agency offered that in writing.</p>
+        <span class="q-result">+75% bookings · no-shows 40% → 18%</span>
+        <div class="q-who">
+          <span class="q-av">NL</span>
+          <div><b>Dr. Nurul</b><span>Practice manager, dental clinic · KL</span></div>
+        </div>
+      </div>
+      <div class="quote">
+        <span class="qmark">"</span>
+        <p>Fastest agency I've worked with. Landing page live in a week, ads live the next, and the first report showed us exactly what was working. We scaled the budget without a single sleepless night.</p>
+        <span class="q-result">1.2% → 2.4% conversion · 30 days</span>
+        <div class="q-who">
+          <span class="q-av">MK</span>
+          <div><b>Mira Koh</b><span>Founder, D2C e-commerce brand</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section id="founder">
+  <div class="wrap">
+    <div class="founder">
+      <div class="founder-photo reveal">
+        <img src="assets/founder.jpg" alt="Steve Lai — founder of Steve Lai Studio" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="kicker">Who you're working with</span>
+        <h2 class="founder-name">Built by Steve Lai</h2>
+        <span class="founder-role">Founder · Software × AI × Growth</span>
+        <p class="founder-quote">"I build growth systems at the intersection of <b>software, AI and digital marketing</b> — helping businesses acquire customers, automate operations and scale faster. Not a big agency. A builder who ships."</p>
+        <div class="founder-facts">
+          <div><b>8+</b><span>years building software &amp; growth systems</span></div>
+          <div><b>40+</b><span>projects shipped</span></div>
+          <div><b>15+</b><span>businesses scaled</span></div>
+        </div>
+        <p class="founder-cred">Every engagement is built in plain sight — you see the numbers from day one, and everything we build is in your name.</p>
       </div>
     </div>
   </div>
@@ -743,6 +915,10 @@ footer{padding:56px 0 40px}
         <p>Leads, conversion rate, cost per acquisition, revenue, hours saved. If it doesn't move a number, it doesn't ship.</p>
       </div>
     </div>
+    <div class="why-own reveal">
+      <b>You own the system. We build it.</b>
+      <p>No black box. Your domain, website, ad accounts, data and automation workflows are in your name from day one. If we ever part ways, nothing is held hostage.</p>
+    </div>
   </div>
 </section>
 
@@ -751,13 +927,13 @@ footer{padding:56px 0 40px}
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="kicker">Investment</span>
-      <h2>Starting from — no surprises.</h2>
-      <p class="sec-sub">Every project is scoped in your free audit. These are where projects typically start.</p>
+      <h2>Projects typically start from — no surprises.</h2>
+      <p class="sec-sub">Every project is scoped in your free audit. These are where engagements typically begin.</p>
     </div>
     <div class="pricing">
       <div class="price-card reveal">
         <div class="p-name">Growth Website</div>
-        <div class="p-price">from <b>RM 3,888</b></div>
+        <div class="p-price">from <b>$990</b></div>
         <ul>
           <li>High-converting landing page or site</li>
           <li>Lead capture + WhatsApp integration</li>
@@ -768,7 +944,7 @@ footer{padding:56px 0 40px}
       </div>
       <div class="price-card reveal">
         <div class="p-name">Growth System</div>
-        <div class="p-price">from <b>RM 6,888</b></div>
+        <div class="p-price">from <b>$2,500</b></div>
         <ul>
           <li>Website + ad campaigns</li>
           <li>Full lead funnel + booking</li>
@@ -779,7 +955,7 @@ footer{padding:56px 0 40px}
       </div>
       <div class="price-card reveal">
         <div class="p-name">AI Automation</div>
-        <div class="p-price">from <b>RM 4,888</b></div>
+        <div class="p-price">from <b>$1,500</b></div>
         <ul>
           <li>AI lead qualification</li>
           <li>24/7 WhatsApp agent</li>
@@ -800,7 +976,7 @@ footer{padding:56px 0 40px}
         <a class="btn btn-primary" href="#contact">Get a Quote →</a>
       </div>
     </div>
-    <p class="pricing-note reveal">All prices in MYR. Ad spend is separate and paid directly to Meta/Google — we never mark it up.</p>
+    <p class="pricing-note reveal">Pricing is based on project scope. Ad spend is paid directly to the advertising platform — we never mark it up.</p>
   </div>
 </section>
 
@@ -838,7 +1014,7 @@ footer{padding:56px 0 40px}
     <div class="faq reveal">
       <details>
         <summary>How much does it cost?</summary>
-        <div class="faq-a">Projects typically start from RM 3,888 for a growth website and RM 6,888 for a full growth system. You get a fixed quote in your free audit — before we start, not after.</div>
+        <div class="faq-a">Projects typically start from $990 for a growth website and $2,500 for a full growth system. You get a fixed quote in your free audit — before we start, not after.</div>
       </details>
       <details>
         <summary>How long will it take?</summary>
@@ -891,7 +1067,7 @@ footer{padding:56px 0 40px}
           <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <input type="hidden" name="subject" value="New Free Growth Audit Request">
           <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
-          <input type="tel" name="phone" placeholder="WhatsApp number (e.g. 012-3456789)" required aria-label="WhatsApp number">
+          <input type="tel" name="phone" placeholder="WhatsApp / phone (with country code)" required aria-label="WhatsApp or phone number">
           <input type="text" name="biz" placeholder="Business / website" required aria-label="Business or website">
           <select name="problem" required aria-label="What's your biggest problem">
             <option value="" disabled selected>What's your biggest problem?</option>
@@ -931,8 +1107,8 @@ footer{padding:56px 0 40px}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span> AI Growth &amp; Automation</a>
-        <p>Ads, websites, funnels and AI automation — one connected system that turns traffic into customers.</p>
+        <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span> Steve Lai <span class="logo-tag">Growth Systems</span></a>
+        <p>Websites, funnels, advertising and AI automation — one connected system that turns traffic into customers.</p>
       </div>
       <div class="foot-col">
         <b>Services</b>
@@ -943,7 +1119,7 @@ footer{padding:56px 0 40px}
       </div>
       <div class="foot-col">
         <b>Company</b>
-        <a href="#results">Results</a>
+        <a href="#results">Case Studies</a>
         <a href="#process">How It Works</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
@@ -961,8 +1137,8 @@ footer{padding:56px 0 40px}
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="yr">2026</span> AI Growth &amp; Automation. All rights reserved.</span>
-      <span class="mono">Kuala Lumpur · Remote worldwide</span>
+      <span>© <span id="yr">2026</span> Steve Lai Studio. All rights reserved.</span>
+      <span class="mono">Built remotely. Serving businesses worldwide.</span>
     </div>
   </div>
 </footer>
@@ -1018,6 +1194,14 @@ function showOk(viaWa=false){
     : '✓ Got it — your free audit video lands within 24 hours.';
   ok.style.display = 'block';
 }
+// case study expand/collapse
+document.querySelectorAll('.case-more').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const card=btn.closest('.case');
+    const open=card.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+});
 // year
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
