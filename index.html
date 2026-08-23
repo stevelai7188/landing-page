@@ -486,15 +486,6 @@ h2{font-size:34px;font-weight:300;letter-spacing:-.7px;line-height:1.12;margin-b
 .form-ok{color:var(--gold);font-size:15px;margin-top:16px;display:none}
 .form-alt{margin-top:18px;font-size:14.5px;color:var(--muted)}
 .form-alt a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(245,176,67,.4)}
-.wa-float{
-  position:fixed;bottom:24px;right:24px;z-index:60;
-  width:56px;height:56px;border-radius:50%;background:#25d366;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 12px 28px -8px rgba(37,211,102,.55);
-  transition:transform .2s;
-}
-.wa-float:hover{transform:translateY(-3px) scale(1.05)}
-.wa-float svg{width:28px;height:28px;fill:#fff}
 
 /* social */
 .social-row{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
@@ -1067,7 +1058,7 @@ footer{padding:56px 0 40px}
           <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <input type="hidden" name="subject" value="New Free Growth Audit Request">
           <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
-          <input type="tel" name="phone" placeholder="WhatsApp / phone (with country code)" required aria-label="WhatsApp or phone number">
+          <input type="email" name="email" placeholder="Your email" required aria-label="Your email">
           <input type="text" name="biz" placeholder="Business / website" required aria-label="Business or website">
           <select name="problem" required aria-label="What's your biggest problem">
             <option value="" disabled selected>What's your biggest problem?</option>
@@ -1081,8 +1072,8 @@ footer{padding:56px 0 40px}
           </select>
           <button class="btn btn-primary" type="submit">Get My Free Growth Audit →</button>
         </form>
-        <p class="form-ok" id="formOk">✓ Got it — your free audit video lands within 24 hours.</p>
-        <p class="form-alt">Prefer to chat? <a href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!%20I'd%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener">WhatsApp me directly →</a></p>
+        <p class="form-ok" id="formOk">✓ Got it — your free audit video lands in your inbox within 24 hours.</p>
+        <p class="form-alt">Prefer email? <a href="mailto:stevelaistudio@gmail.com" rel="noopener">stevelaistudio@gmail.com →</a></p>
       </div>
       <div class="social-row">
         <a class="soc" href="https://www.facebook.com/AIGrowthAutomation" target="_blank" rel="noopener">
@@ -1127,7 +1118,6 @@ footer{padding:56px 0 40px}
       <div class="foot-col">
         <b>Contact</b>
         <a href="mailto:stevelaistudio@gmail.com">stevelaistudio@gmail.com</a>
-        <a href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!" target="_blank" rel="noopener">+60 18-764 2198 (WhatsApp)</a>
       </div>
       <div class="foot-col">
         <b>Follow</b>
@@ -1143,10 +1133,7 @@ footer{padding:56px 0 40px}
   </div>
 </footer>
 
-<!-- floating WhatsApp -->
-<a class="wa-float" id="waFloat" href="https://wa.me/60187642198?text=Hi%20AI%20Growth%20%26%20Automation!%20I'd%20like%20a%20free%20growth%20audit." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.016 3.074 4.884 4.29.688.295 1.225.473 1.654.606.713.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<!-- floating WhatsApp (removed — email-first; restore by re-adding the wa-float anchor) -->
 
 <script>
 // mobile menu
@@ -1168,8 +1155,8 @@ function trackContact(){
 }
 document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',trackContact));
 
-// form: submit to Web3Forms if key set; fallback to WhatsApp with prefilled lead info
-const WA_NUM = "60187642198";
+// form: submit to Web3Forms if key set; fallback to mailto with prefilled lead info
+const EMAIL_ADDR = "stevelaistudio@gmail.com";
 document.getElementById('auditForm').addEventListener('submit', async e=>{
   e.preventDefault();
   const key = document.getElementById('w3fKey').value.trim();
@@ -1181,17 +1168,17 @@ document.getElementById('auditForm').addEventListener('submit', async e=>{
       if (j.success) { showOk(); e.target.reset(); trackLead(); return; }
     } catch(_) {}
   }
-  // fallback: open WhatsApp with the lead details
-  const msg = `Free Growth Audit Request\nName: ${fd.get('name')}\nWhatsApp: ${fd.get('phone')}\nBusiness: ${fd.get('biz')}\nBiggest problem: ${fd.get('problem')}`;
-  window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`, '_blank');
+  // fallback: open mail client with the lead details
+  const msg = `Free Growth Audit Request\nName: ${fd.get('name')}\nEmail: ${fd.get('email')}\nBusiness: ${fd.get('biz')}\nBiggest problem: ${fd.get('problem')}`;
+  window.open(`mailto:${EMAIL_ADDR}?subject=${encodeURIComponent('Free Growth Audit Request')}&body=${encodeURIComponent(msg)}`, '_self');
   showOk(true);
   trackLead();
 });
-function showOk(viaWa=false){
+function showOk(viaMail=false){
   const ok = document.getElementById('formOk');
-  ok.textContent = viaWa
-    ? '✓ Opening WhatsApp — hit send and your audit request is in.'
-    : '✓ Got it — your free audit video lands within 24 hours.';
+  ok.textContent = viaMail
+    ? '✓ Opening your email app — hit send and your audit request is in.'
+    : '✓ Got it — your free audit video lands in your inbox within 24 hours.';
   ok.style.display = 'block';
 }
 // case study expand/collapse
